@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+=========== JSON FORMATTING =============
+
+!!!! IMPORTANT !!!! 
+
+ALL RECIPES MUST BE INSIDE THE RECIPES FOLDER AND HAVE THERE OWN .JSON
+
+
+{
+  "_id": "CHR_Recipe_01", --- Can be whatever you choose, Mongold ID is handled 
+  "areaType": 6, --- Where the craft will be done, reference supplied list below
+  "requiredLevel": 1,--- Required station level
+  "productionTime": 60,
+  "endProduct": "5c94bbff86f7747ee735c08f", --- Item you will recieve once craft is complete.
+  "count": 1, --- How many you will get
+  "needFuelForAllProductionTime": true, 
+  "inputs": [ 
+    { "tpl": "5755356824597772cb798962", "count": 1 }, --- Items needed for craft, follow format to add additional items. Get item ID's from here https://db.sp-tarkov.com/search
+    { "tpl": "544fb45d4bdc2dee738b4568", "count": 1 }
+  ],
+  "tools": [
+    { "tpl": "590c2d8786f774245b1f03f3", "count": 1 } --- "Tools" required for crafting, can be any item as far as I can tell. 
+  ]
+}
+
+
+
+Use some of these at your own...risk? I haven't tested ones that do not contain vanilla recipes, maybe it'll work, maybe it won't. 
+
+==== HIDEOUT AREA TYPES ====
+AreaType 0 = Vents
+AreaType 1 = Security
+AreaType 2 = WaterCloset
+AreaType 3 = Stash
+AreaType 4 = Generator
+AreaType 5 = Heating
+AreaType 6 = WaterCollector
+AreaType 7 = MedStation
+AreaType 8 = Kitchen
+AreaType 9 = RestSpace
+AreaType 10 = Workbench
+AreaType 11 = IntelligenceCenter
+AreaType 12 = ShootingRange
+AreaType 13 = Library
+AreaType 14 = ScavCase
+AreaType 15 = Illumination
+AreaType 16 = PlaceOfFame
+AreaType 17 = AirFilteringUnit
+AreaType 18 = SolarPower
+AreaType 19 = BoozeGenerator
+AreaType 20 = BitcoinFarm
+AreaType 21 = ChristmasIllumination
+AreaType 22 = EmergencyWall
+AreaType 23 = Gym
+AreaType 24 = WeaponStand
+AreaType 25 = WeaponStandSecondary
+AreaType 26 = EquipmentPresetsStand
+AreaType 27 = CircleOfCultists
+==== END HIDEOUT AREA TYPES ====
