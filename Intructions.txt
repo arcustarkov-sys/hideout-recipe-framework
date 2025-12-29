@@ -7,61 +7,80 @@
 
 
 
-=========== JSON FORMATTING =============
+=========== RECIPE FORMATTING =============
 
 !!!! IMPORTANT !!!! 
 
 ALL RECIPES MUST BE INSIDE THE RECIPES FOLDER AND HAVE THERE OWN .JSON
 
+Easiest route would be to just copy and paste my exampleRecipe and rename the file to whatever you'd like, as long as it is a json and follows the below format. File name, and _id do not matter.
+
 
 {
-  "_id": "CHR_Recipe_01", --- Can be whatever you choose, Mongold ID is handled 
+  "_id": "CHR_Recipe_01", --- Can be whatever you choose, just make sure that you change this for EVERY recipe. EXAMPLE: CHR_Recipe_02
+
   "areaType": 6, --- Where the craft will be done, reference supplied list below
+
   "requiredLevel": 1,--- Required station level
-  "productionTime": 60,
+
+  "productionTime": 60, --- Production time in seconds
+
   "endProduct": "5c94bbff86f7747ee735c08f", --- Item you will recieve once craft is complete.
-  "count": 1, --- How many you will get
-  "needFuelForAllProductionTime": true, 
+
+  "count": 1, --- How many of the item you will get
+
+  "needFuelForAllProductionTime": true, --- Does it require constant fuel for crafting?   true == yes false == no
+
   "inputs": [ 
     { "tpl": "5755356824597772cb798962", "count": 1 }, --- Items needed for craft, follow format to add additional items. Get item ID's from here https://db.sp-tarkov.com/search
     { "tpl": "544fb45d4bdc2dee738b4568", "count": 1 }
   ],
   "tools": [
-    { "tpl": "590c2d8786f774245b1f03f3", "count": 1 } --- "Tools" required for crafting, can be any item as far as I can tell. 
+    { "tpl": "590c2d8786f774245b1f03f3", "count": 1 } --- "Tools" required for crafting. Delete everything but the two {} if you want there to be NO tool req. Example below. 
   ]
 }
 
 
 
-Use some of these at your own...risk? I haven't tested ones that do not contain vanilla recipes, maybe it'll work, maybe it won't. 
+NO TOOL REQ EXAMPLE
+
+ "tools": [
+    {} 
+  ]
+
+
+
+
+
+
+
+Use some of these use at your own...risk? I haven't tested ones that do not contain vanilla recipes.
 
 ==== HIDEOUT AREA TYPES ====
 AreaType 0 = Vents
 AreaType 1 = Security
-AreaType 2 = WaterCloset
-AreaType 3 = Stash
+AreaType 2 = Lavatory
 AreaType 4 = Generator
 AreaType 5 = Heating
-AreaType 6 = WaterCollector
-AreaType 7 = MedStation
-AreaType 8 = Kitchen
-AreaType 9 = RestSpace
+AreaType 6 = Water Collector
+AreaType 7 = Med Station
+AreaType 8 = Nutrition Unit
+AreaType 9 = Rest Space
 AreaType 10 = Workbench
-AreaType 11 = IntelligenceCenter
-AreaType 12 = ShootingRange
+AreaType 11 = Intelligence Center
+AreaType 12 = Shooting Range
 AreaType 13 = Library
-AreaType 14 = ScavCase
+AreaType 14 = Scav Case
 AreaType 15 = Illumination
-AreaType 16 = PlaceOfFame
-AreaType 17 = AirFilteringUnit
-AreaType 18 = SolarPower
-AreaType 19 = BoozeGenerator
-AreaType 20 = BitcoinFarm
-AreaType 21 = ChristmasIllumination
-AreaType 22 = EmergencyWall
+AreaType 16 = Hall Of Fame
+AreaType 17 = Air Filtering Unit
+AreaType 18 = Solar Power
+AreaType 19 = Booze Generator
+AreaType 20 = Bitcoin Farm
+AreaType 21 = Christmas Tree
 AreaType 23 = Gym
-AreaType 24 = WeaponStand
-AreaType 25 = WeaponStandSecondary
-AreaType 26 = EquipmentPresetsStand
-AreaType 27 = CircleOfCultists
+AreaType 24 = Weapon Stand
+AreaType 25 = WeaponStand Secondary
+AreaType 26 = Equipment Presets Stand
+AreaType 27 = Cult Circle
 ==== END HIDEOUT AREA TYPES ====
