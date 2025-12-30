@@ -36,17 +36,11 @@ Easiest route would be to just copy and paste my exampleRecipe and rename the fi
     { "tpl": "544fb45d4bdc2dee738b4568", "count": 1 }
   ],
   "tools": [
-    { "tpl": "590c2d8786f774245b1f03f3", "count": 1 } --- "Tools" required for crafting. Delete everything but the two {} if you want there to be NO tool req. Example below. Or reference exampleRecipe_02
+    { "tpl": "590c2d8786f774245b1f03f3", "count": 1 } --- "Tools" required for crafting. Delete the entire "tools" array. For an example please check exampleRecipe_02
   ]
 }
 
 
-
-NO TOOL REQ EXAMPLE
-
- "tools": [
-    {} 
-  ]
 
 
 
